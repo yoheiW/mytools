@@ -85,10 +85,11 @@ let g:vimshell_split_command="tabnew"
 
 ""  NERDTree
 let NERDTreeShowHidden = 1
-let g:nerdtree_tabs_open_on_console_startup = 1
+"let g:nerdtree_tabs_open_on_console_startup = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "autocmd vimenter * NERDTree
-
+command Tree NERDTreeToggle
+"nnoremap <silent><C-t> :Tree<CR>
 
 "" vim setting
 
